@@ -1,11 +1,19 @@
+# /bookmark_manager_challenge/app/app.rb
+
 require 'sinatra/base'
 #start server with rackup -p 4567
+require_relative 'models/link'
 
 class BookmarkManager < Sinatra::Base
-  set :session_secret, 'super secret'
+  # set :session_secret, 'super secret'
 
   get '/' do
-    'This is the homepage'
+    "Hello Wed"
+  end
+
+  get '/links' do
+    @link = Link.all
+    erb :'links/index'
   end
 
   # start the server if ruby file executed directly

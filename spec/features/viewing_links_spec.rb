@@ -4,9 +4,9 @@ require 'spec_helper'
 # So that I can quickly go to web sites I regularly visit
 # I would like to *see a list* of links (on the homepage)
 
-ffeature 'Viewing links' do
+feature 'View links' do
 
-  scenario 'I can see existing links on the links page' do
+  scenario 'a) See existing links on the links page' do
     # We can use `.create`, which we used in irb to make a Student, within our test!
     Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
