@@ -11,7 +11,7 @@ I would like to *see a list* of links (on the homepage)
 ```
 As a user
 So that I can save a new website link
-I would like to *add a url and title* to my bookmark manager
+I would like to *add a address url and title* to my bookmark manager
 ```
 
 ```
