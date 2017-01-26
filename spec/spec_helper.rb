@@ -1,3 +1,4 @@
+ENV["RACK_ENV"] = "test" #  to ensure that my tests run the application in test mode
 require './app/models/link'
 require 'capybara/rspec'
 require './app/app'
@@ -28,7 +29,7 @@ RSpec.configure do |config|
   # assertions if you prefer.
   # Everything in this block runs once before all the tests run
 
-  # ----cleans the database each time rspec is run  --------------
+  # ----cleans the contents of the DB every time rspec is run  --------------
   #https://github.com/DatabaseCleaner/database_cleaner
   config.before(:suite) do
     DatabaseCleaner.strategy = :transaction

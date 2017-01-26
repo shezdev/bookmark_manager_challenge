@@ -1,5 +1,5 @@
-# /bookmark_manager_challenge/app/app.rb
-
+# /app/app.rb
+ENV["RACK_ENV"] ||= "development" # run in dev mode by default
 require 'sinatra/base'
 #start server with rackup -p 4567
 require_relative 'models/link'
