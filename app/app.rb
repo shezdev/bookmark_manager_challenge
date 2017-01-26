@@ -29,7 +29,7 @@ class BookmarkManager < Sinatra::Base
     @link.title = @title
     @link.url = @url
     @link.save
-    redirect :'links'
+    redirect '/links'
   end
 
 
