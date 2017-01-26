@@ -1,5 +1,7 @@
 # /app/app.rb
 ENV["RACK_ENV"] ||= "development" # run in dev mode by default
+# Because RSpec is configured to run in my test env, now I can add data in my app and run the tests without removing the links that I created manually through the web interface.
+
 require 'sinatra/base'
 #start server with rackup -p 4567
 require_relative 'models/link'
