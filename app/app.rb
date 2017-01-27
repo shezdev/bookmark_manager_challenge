@@ -4,7 +4,8 @@ ENV["RACK_ENV"] ||= "development" # run in dev mode by default
 
 require 'sinatra/base'
 #start server with rackup -p 4567
-require_relative 'models/link'
+# require_relative 'models/link'
+require_relative "data_mapper_setup"
 
 class BookmarkManager < Sinatra::Base
   # set :session_secret, 'super secret'

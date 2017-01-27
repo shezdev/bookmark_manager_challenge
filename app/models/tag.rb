@@ -8,8 +8,8 @@ class Tag
   property :tag_title,      String    # A varchar type string, for short strings
 end
 
-  # DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
-  # DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
-  DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
-  DataMapper.finalize
-  DataMapper.auto_upgrade!
+  # # DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
+  # # DataMapper.setup(:default, "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
+  # DataMapper.setup(:default, ENV['DATABASE_URL'] || "postgres://localhost/bookmark_manager_#{ENV['RACK_ENV']}")
+  # DataMapper.finalize
+  # DataMapper.auto_upgrade!
