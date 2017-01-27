@@ -4,8 +4,10 @@ require "dm-postgres-adapter"
 class Tag
   include DataMapper::Resource
 
-  property :tag_id,         Serial    # An auto-increment integer key
-  property :tag_title,      String    # A varchar type string, for short strings
+  has n, :links, through: Resource
+
+  property :id,         Serial    # An auto-increment integer key
+  property :title,      String    # A varchar type string, for short strings
 end
 
   # # DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
