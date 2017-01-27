@@ -25,3 +25,41 @@ As a user
 So that I can quickly find links on a particular topic
 I would like to *filter links by tag*
 ```
+
+#Checking contents of DB:
+
+```
+heroku pg:psql
+shereenapp::DATABASE=> \list
+shereenapp::DATABASE=> heroku pg:psql\dt
+              List of relations
+ Schema |   Name    | Type  |     Owner
+--------+-----------+-------+----------------
+ public | link_tags | table | tqzkbazznlojsi
+ public | links     | table | tqzkbazznlojsi
+ public | tags      | table | tqzkbazznlojsi
+(3 rows)
+
+shereenapp::DATABASE-> SELECT * FROM links;
+ERROR:  syntax error at or near "heroku"
+LINE 1: heroku pg:psql
+        ^
+shereenapp::DATABASE=> SELECT * FROM links;
+ id |  title  |        url        | link_id | link_title | link_url
+----+---------+-------------------+---------+------------+----------
+  1 | RT News | http://www.rt.com |       1 |            |
+  2 | RT News | http://www.rt.com |       2 |            |
+(2 rows)
+
+shereenapp::DATABASE=> SELECT * FROM tags;
+ tag_id | tag_title | id | title
+--------+-----------+----+-------
+      1 |           |  1 | News
+(1 row)
+
+shereenapp::DATABASE=> SELECT * FROM link_tags;
+ link_id | tag_id
+---------+--------
+       1 |      1
+       2 |      1
+```
