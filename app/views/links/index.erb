@@ -6,7 +6,7 @@
     <li>
       <b>Title: </b> <%= link.title %>
       <b>URL: </b><a href="<%= link.url%>"><%=link.url%></a>
-      <b>Tags: </b><%= link.tags.title %>
+      <b>Tags: </b><%= link.tags[0].title %>
     </li>
   <% end %>
 </ul>
