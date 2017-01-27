@@ -40,10 +40,7 @@ shereenapp::DATABASE=> heroku pg:psql\dt
  public | tags      | table | tqzkbazznlojsi
 (3 rows)
 
-shereenapp::DATABASE-> SELECT * FROM links;
-ERROR:  syntax error at or near "heroku"
-LINE 1: heroku pg:psql
-        ^
+
 shereenapp::DATABASE=> SELECT * FROM links;
  id |  title  |        url        | link_id | link_title | link_url
 ----+---------+-------------------+---------+------------+----------
