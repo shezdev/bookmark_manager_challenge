@@ -27,9 +27,13 @@ class BookmarkManager < Sinatra::Base
     @tags = Tag.first_or_create(title: params[:tag_input])
     @link = Link.create(title: params[:title_input], url: params[:url_input], tags: [@tags])
     @link.tags << @tags
-    @link.save    
-
+    @link.save
     redirect '/links'
+  end
+
+  get '/tags/bubbles' do
+    @link = Link.all
+    erb :'links/bubbles'
   end
 
 
