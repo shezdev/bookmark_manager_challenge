@@ -24,10 +24,11 @@ class BookmarkManager < Sinatra::Base
   end
 
   post '/links' do
-    @title = params[:title_input]
-    @url = params[:url_input]
-    @tag = params[:tag_input]
-    @link = Link.create(@title, @url, @tag)
+    # @title = params[:title_input]
+    # @url = params[:url_input]
+    # @tags = params[:tag_input]
+    @tags = Tag.first_or_create(title: params[:tag_input])
+    @link = Link.create(title: params[:title_input], url: params[:url_input], tags: [@tags])
     # @link.title = @title
     # @link.url = @url
     # @link.save
