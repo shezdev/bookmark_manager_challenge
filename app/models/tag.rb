@@ -1,12 +1,11 @@
 require "data_mapper"
 require "dm-postgres-adapter"
 
-class Link
+class Tag
   include DataMapper::Resource
 
-  property :link_id,         Serial    # An auto-increment integer key
-  property :link_title,      String    # A varchar type string, for short strings
-  property :link_url,        String    # A varchar type string, for short strings
+  property :tag_id,         Serial    # An auto-increment integer key
+  property :tag_title,      String    # A varchar type string, for short strings
 end
 
   # DataMapper.setup(:default, 'postgres://localhost/bookmark_manager_test')
