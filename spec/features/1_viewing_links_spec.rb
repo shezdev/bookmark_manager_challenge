@@ -6,7 +6,7 @@ require 'spec_helper'
 
 feature 'View links' do
 
-  scenario 'a) See existing links on the links page' do
+  scenario '1) See existing links on the links page' do
     # We can use `.create`, which we used in irb to make a Student, within our test!
     Link.create(url: 'http://www.makersacademy.com', title: 'Makers Academy')
 
