@@ -4,12 +4,12 @@
 
 
   <% @link.each do |link| %>
-    <li>
-      <% if link.tags[0].title == 'Bubbles'%> 
-        <b>Title: </b> <%= link.title %>
-        <b>URL: </b><a href="<%= link.url%>"><%=link.url%></a>
-        <b>Tags: </b><%= link.tags[0].title %>
+
+      <% if link.tags[0].title == 'Bubbles'%>
+        <li>
+          <b>Title: </b> <%= link.title %>
+          <b>URL: </b><a href="<%= link.url%>"><%=link.url%></a>
+          <b>Tags: </b><%= link.tags[0].title %>
+        </li>
       <% end %>
-    </li>
   <% end %>
-</ul>
